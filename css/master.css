@@ -266,3 +266,113 @@ textarea {
     background-image: url("../img/5.jpg");
   }
 }
+
+/* CSS animations */
+.cpointer {
+  position: absolute;
+  width: 0.3em;
+  height: 1.2em;
+  margin: 0 0.3em;
+  background:rgba(149, 165, 166,1);
+  -moz-animation: flash 2s infinite;
+  animation: flash 2s infinite;
+}
+
+.cflash {
+  -webkit-animation: flash 1.2s linear infinite;
+  -moz-animation: flash 1.2s linear infinite;
+  animation: flash 1.2s linear infinite;
+}
+
+@-webkit-keyframes flash {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-moz-keyframes flash {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes flash {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* About section styles */
+.container2 {
+  max-width: 1200px;
+  margin:0 auto;
+  padding: 2em 4em;
+}
+
+.title {
+  font-family: 'Tauri', sans-serif;
+  text-transform: uppercase;
+  color:rgba(149, 165, 166,1);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+
+}
+
+.largeP {
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+}
+
+.red {
+  color: #c13b37;
+  font-family: 'Oswald', sans-serif;
+}
+
+#about h2 {
+  text-align: right;
+}
+
+#about .ah3 {
+  padding-bottom: 2em;
+}
+
+#about .ah3 h3 {
+  text-align: center;
+  line-height: 1.5em;
+}
+
+#about .skills {
+  margin-bottom: 20px;
+}
+
+#about label {
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  line-height: 1em;
+}
+
+.progress {
+  width: 100%;
+  border-radius: 0;
+  background-color: rgba(236, 240, 241,0.7);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.progress-bar {
+  background: #c13b37;
+}
+
+#pbar1 {
+  width:32%;
+}
+
+#pbar2 {
+  width:12%;
+}
+
+#pbar3 {
+  width:40%;
+}
+
+#pbar4 {
+  width:22%;
+}
