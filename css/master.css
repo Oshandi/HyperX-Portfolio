@@ -267,7 +267,191 @@ textarea {
   }
 }
 
+/* Menu styles */
+.menuContainer {
+  position: fixed;
+  top:20px;
+  left:20px;
+  z-index: 200;
+}
+
+.menu {
+  width: 60px;
+  height: 60px;
+}
+
+.menu .bar {
+  position: relative;
+  width: 34px;
+  height: 4px;
+  margin: 0 auto;
+  background:#c13b37;
+}
+
+.menu .bar:nth-child(1) {
+  top: 15px;
+  transition: all 1s ease;
+}
+
+.menu .bar:nth-child(2) {
+  top: 24px;
+  transition: all 1s ease;
+}
+
+.menu .bar:nth-child(3) {
+  top: 33px;
+  -moz-animation-timing-function: ease;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-name: lowestbarup;
+  -webkit-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -moz-animation-timing-function: ease;
+  -moz-animation-delay: 0s;
+  -moz-animation-duration: 1s;
+  -moz-animation-name: lowestbarup;
+  -moz-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-duration: 1s;
+  animation-name: lowestbarup;
+  animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+}
+
+.menu + ul {
+  list-style-type: none;
+  position: relative;
+  margin: 0;
+  padding: 30px 0px 0px 30px;
+}
+
+.menu + ul li {
+  position: relative;
+  top: -20px;
+  background: #111;
+  margin: 10px;
+  padding: 0 15px;
+  opacity: 0;
+  transition: all 1.25s ease;
+}
+
+.menu + ul li a {
+  display: none;
+  font-size: 22px;
+  text-align: left;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(0, 0, 0,0.8);
+}
+
+.menu.active .bar:nth-child(1) {
+  top: 27px;
+  transform: rotate(405deg);
+  transform-origin: 50% 50%;
+}
+
+.menu.active .bar:nth-child(2) {
+  transform: rotate(495deg);
+}
+
+.menu.active .bar:nth-child(3) {
+  -moz-animation-timing-function: ease;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-name: lowestbar;
+  -webkit-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -moz-animation-timing-function: ease;
+  -moz-animation-delay: 0s;
+  -moz-animation-duration: 1s;
+  -moz-animation-name: lowestbar;
+  -moz-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-duration: 1s;
+  animation-name: lowestbar;
+  animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+}
+
+.menu.active + ul li {
+  opacity: 1;
+  top: 15px;
+}
+.menu.active + ul li a{
+  display: block;
+}
+
+@-webkit-keyframes lowestbar {
+  50% {
+    transform: translateY(0px) scaleX(0.1);
+  }
+  100% {
+    transform: translateY(170px) scaleX(0.1) scaleY(60);
+  }
+}
+@-moz-keyframes lowestbar {
+  50% {
+    transform: translateY(0px) scaleX(0.1);
+  }
+  100% {
+    transform: translateY(170px) scaleX(0.1) scaleY(60);
+  }
+}
+@keyframes lowestbar {
+  50% {
+    transform: translateY(0px) scaleX(0.1);
+  }
+  100% {
+    transform: translateY(170px) scaleX(0.1) scaleY(60);
+  }
+}
+@-webkit-keyframes lowestbarup {
+  0% {
+    transform: translateY(170px) scaleX(0.1) scaleY(60);
+  }
+  50% {
+    transform: scaleX(0.1) scaleY(1);
+  }
+  100% {
+    transform: translateY(0px) scaleX(1);
+  }
+}
+@-moz-keyframes lowestbarup {
+  0% {
+    transform: translateY(170px) scaleX(0.1) scaleY(60);
+  }
+  50% {
+    transform: scaleX(0.1) scaleY(1);
+  }
+  100% {
+    transform: translateY(0px) scaleX(1);
+  }
+}
+@keyframes lowestbarup {
+  0% {
+    transform: translateY(170px) scaleX(0.1) scaleY(60);
+  }
+  50% {
+    transform: scaleX(0.1) scaleY(1);
+  }
+  100% {
+    transform: translateY(0px) scaleX(1);
+  }
+}
+
+@media all and (max-width: 768px) {
+  .menuContainer {
+      top:2px;
+      left:2px;
+    }
+}
+
 /* CSS animations */
+
+/* Flash pointer */
 .cpointer {
   position: absolute;
   width: 0.3em;
