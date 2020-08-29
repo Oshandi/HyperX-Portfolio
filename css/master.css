@@ -209,6 +209,30 @@ textarea {
   z-index: -10;
 }
 
+.container2 {
+  max-width: 1200px;
+  margin:0 auto;
+  padding: 2em 4em;
+}
+
+.title {
+  font-family: 'Tauri', sans-serif;
+  text-transform: uppercase;
+  color:rgba(149, 165, 166,1);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.container3 {
+  max-width: 900px;
+  float: right;
+  margin:0 auto;
+}
+
+.container5{
+  margin:0 auto;
+  padding:0 20px;
+}
+
 #homebg {
   position: absolute;
   right: 0;
@@ -485,20 +509,6 @@ textarea {
 }
 
 /* About section styles */
-.container2 {
-  max-width: 1200px;
-  margin:0 auto;
-  padding: 2em 4em;
-}
-
-.title {
-  font-family: 'Tauri', sans-serif;
-  text-transform: uppercase;
-  color:rgba(149, 165, 166,1);
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-
-}
-
 .largeP {
   text-transform: uppercase;
   font-family: 'Oswald', sans-serif;
@@ -559,4 +569,17 @@ textarea {
 
 #pbar4 {
   width:22%;
+}
+
+/* Services section styles */
+#servicesp h1 {
+ line-height: 300px;
+}
+
+#services img {
+  margin:0 auto 2em auto;
+}
+
+#services h2 {
+  text-align: left;
 }
