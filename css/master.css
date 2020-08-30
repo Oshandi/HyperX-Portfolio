@@ -159,7 +159,7 @@ textarea {
 /* Section styles - general */
 .content {
   position: relative;
-  width:100%;
+  width:100vw;
   background-image: url("../img/6.png");
   background-repeat:repeat;
   background-attachment: fixed;
@@ -171,7 +171,7 @@ textarea {
 
 .parallax {
   position: relative;
-  width: 100%;
+  width: 100vw;
   height: 300px;
   background-repeat: no-repeat;
   background-position: 50% 0px;
@@ -187,14 +187,15 @@ textarea {
   top:0px;
   left:0px;
   background:url(../img/overlay.png) top left;
-  background-repeat: repeat;
+  background-repeat: repeat repeat;
   opacity:0.3;
   z-index: -5;
 }
 
-@media all and (min-width: 1200px){
-  .overlay{
-
+@media all and (min-height: 802px){
+  .overlay {
+    background:url(../img/overlaybg.svg) top left;
+    background-repeat: repeat repeat;
   }
 }
 
@@ -242,6 +243,12 @@ textarea {
   width: auto;
   height: auto;
   z-index: -100;
+}
+
+@media all and (max-width: 720px){
+  #homebg{
+    display: none;
+  }
 }
 
 #servicesp h1,
@@ -572,6 +579,119 @@ textarea {
   0% { opacity: 1; }
   50% { opacity: 0; }
   100% { opacity: 1; }
+}
+
+/* Home section styles */
+#logo {
+  padding:0 2em;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  -webkit-transform: translate(-50%,-40%);
+  -moz-transform: translate(-50%,-40%);
+  -moz-transform: translate(-50%,-40%);
+  transform: translate(-50%,-40%);
+}
+
+#introquote {
+  width:100%;
+  position: absolute;
+  left: 50%;
+  top: 63%;
+  -webkit-transform: translate(-50%,-63%);
+  -moz-transform: translate(-50%,-63%);
+  transform: translate(-50%,-63%);
+}
+
+.arrow {
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  top: 95%;
+  -webkit-transform: translate(-50%, -95%);
+  -moz-transform: translate(-50%, -95%);
+  transform: translate(-50%, -95%);
+}
+
+.arrow1 {
+  -webkit-animation: animArrow 2s ease-in-out infinite;
+  -moz-animation: animArrow 2s ease-in-out infinite;
+  animation: animArrow 2s ease-in-out infinite;
+}
+
+.arrow2 {
+  -webkit-animation: animArrow 2s 1s ease-in-out infinite;
+  -moz-animation: animArrow 2s 1s ease-in-out infinite;
+  animation: animArrow 2s 1s ease-in-out infinite;
+}
+
+.arrow:before,
+.arrow:after {
+  background: #fff;
+  content: '';
+  display: block;
+  height: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25px;
+}
+
+.arrow:before {
+  -webkit-transform: rotate(45deg) translateX(-23%);
+  -moz-transform: rotate(45deg) translateX(-23%);
+  transform: rotate(45deg) translateX(-23%);
+  -webkit-transform-origin: top left;
+  -moz-transform-origin: top left;
+  transform-origin: top left;
+}
+
+.arrow:after {
+  -webkit-transform: rotate(-45deg) translateX(23%);
+  -moz-transform: rotate(-45deg) translateX(23%);
+  transform: rotate(-45deg) translateX(23%);
+  -webkit-transform-origin: top right;
+  -moz-transform-origin: top right;
+  transform-origin: top right;
+}
+
+@-webkit-keyframes animArrow {
+  0% {
+    opacity: 0;
+    top: 91%;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes animArrow {
+  0% {
+    opacity: 0;
+    top: 91%;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes animArrow {
+  0% {
+    opacity: 0;
+    top: 91%;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 /* About section styles */
