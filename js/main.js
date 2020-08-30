@@ -21,4 +21,18 @@ $(document).ready(function(){
     }
   });
 
+  //portfolio gallery
+  $(".item").click(function (e) {
+      e.stopPropagation();
+      $(".item").removeClass("clicked");
+      $(this).toggleClass("clicked");
+      $("body").addClass("showingItem");
+
+    });
+
+    $('html').click(function() {
+       $(".item").removeClass("clicked");
+       $("body").removeClass("showingItem");
+    }); 
+
 });
