@@ -42,11 +42,13 @@ $(document).ready(function(){
 
 	//pagination functionality
 	function onScroll(e){
-		var scrollPos = $(document).scrollTop();
+		//var scrollPos = $(document).scrollTop();
+		var scrollPos = $(window).scrollTop() + $(window).height() ;
+		var scrollPosTop = $(window).scrollTop();
 			$('#pagination div').each(function () {
 				var currLink = $(this);
 			  var refElement = $(currLink.attr("data-type"));
-			  if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+			  if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPosTop) {
 			  	$('#pagination div').removeClass("active");
 			    	currLink.addClass("active");
 			    }
