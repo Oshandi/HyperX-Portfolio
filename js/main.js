@@ -21,6 +21,23 @@ $(document).ready(function(){
     }
   });
 
+	//pagination functionality
+	function onScroll(e){
+		var scrollPos = $(document).scrollTop();
+			$('#pagination div').each(function () {
+				var currLink = $(this);
+			  var refElement = $(currLink.attr("data-type"));
+			  if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+			  	$('#pagination div').removeClass("active");
+			    	currLink.addClass("active");
+			    }
+			    else{
+			      currLink.removeClass("active");
+			    }
+			  });
+	}
+	$(document).on("scroll", onScroll);
+
   //portfolio gallery
   $(".item").click(function (e) {
       e.stopPropagation();
@@ -33,6 +50,6 @@ $(document).ready(function(){
     $('html').click(function() {
        $(".item").removeClass("clicked");
        $("body").removeClass("showingItem");
-    }); 
+    });
 
 });

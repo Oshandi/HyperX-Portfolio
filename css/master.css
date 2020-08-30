@@ -159,7 +159,7 @@ textarea {
 /* Section styles - general */
 .content {
   position: relative;
-  width:100vw;
+  width:100%;
   background-image: url("../img/6.png");
   background-repeat:repeat;
   background-attachment: fixed;
@@ -171,7 +171,7 @@ textarea {
 
 .parallax {
   position: relative;
-  width: 100vw;
+  width: 100%;
   height: 300px;
   background-repeat: no-repeat;
   background-position: 50% 0px;
@@ -486,6 +486,79 @@ textarea {
       left:2px;
     }
 }
+
+/* pagination styles */
+#pagination {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+}
+
+
+.page:focus {
+  outline: none;
+}
+
+#pagination .page {
+  position: fixed;
+  left: 0;
+  top: 90%;
+  -webkit-transform: rotate3d(0,0,1,-90deg) translateY(-90%);
+  -moz-transform: rotate3d(0,0,1,-90deg) translateY(-90%);
+  transform:rotate3d(0,0,1,-90deg) translateY(-90%);
+  display: block;
+  width: 2.5em;
+  margin: 0 2em;
+  padding: 0;
+  line-height: 1;
+  letter-spacing: 0;
+  border: 0;
+  background: none;
+  white-space: nowrap;
+  }
+
+
+#pagination .pageTitle {
+  position: relative;
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 3px;
+  opacity: 0;
+  top:-10px;
+  color: #c13b37;
+  font-family: 'Inconsolata', monospace;
+  text-transform: uppercase;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transition-timing-function: cubic-bezier(0.2,1,0.3,1);
+  -moz-transition-timing-function: cubic-bezier(0.2,1,0.3,1);
+  transition-timing-function: cubic-bezier(0.2,1,0.3,1);
+
+}
+
+#pagination a,
+#pagination a:hover,
+#pagination a:focus,
+#pagination a:active,
+#pagination a:visited{
+  margin-left: 2em;
+  font-size: 14px;
+  letter-spacing: 5px;
+}
+
+#pagination .active .pageTitle {
+  opacity: 1;
+  top:0;
+}
+
+@media all and (max-width: 768px) {
+  #pagination {
+      display: none;
+    }
+}
+
 
 /* CSS animations */
 
