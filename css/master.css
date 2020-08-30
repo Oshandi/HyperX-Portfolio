@@ -244,6 +244,13 @@ textarea {
   z-index: -100;
 }
 
+#servicesp h1,
+#portfoliop h1,
+#contactp h1,
+#footerp h1 {
+ line-height: 300px;
+}
+
 #home {
   height:100vh;
   background-image: url("../img/1b.jpg");
@@ -631,10 +638,6 @@ textarea {
 }
 
 /* Services section styles */
-#servicesp h1 {
- line-height: 300px;
-}
-
 #services img {
   margin:0 auto 2em auto;
 }
@@ -646,10 +649,6 @@ textarea {
 /* Portfolio section styles */
 #portfolio h2 {
   text-align: right;
-}
-
-#portfoliop h1 {
- line-height: 300px;
 }
 
 body.showingItem .item:not(.clicked) {
@@ -811,10 +810,6 @@ body.showingItem .item:not(.clicked) {
   text-align: left;
 }
 
-#contactp h1 {
- line-height: 300px;
-}
-
 #contactform {
   padding-bottom: 2em;
 }
@@ -938,4 +933,26 @@ body.showingItem .item:not(.clicked) {
 
 .locaImg {
   margin:2em auto;
+}
+
+/* Footer section styles */
+#footerp h1 {
+  padding: 0 2.5em;
+}
+
+.footer {
+  position: absolute;
+  left: 50%;
+  top: 90%;
+  -webkit-transform: translate(-50%, -90%);
+  -moz-transform: translate(-50%, -90%);
+  transform: translate(-50%, -90%);
+}
+
+.footer p {
+  margin-bottom: 0;
+  width:100%;
+  font-weight: bold;
+  font-size: 20px;
+  text-shadow: 0 0 10px rgba(0, 0, 0,1);
 }
