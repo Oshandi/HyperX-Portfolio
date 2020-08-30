@@ -1,5 +1,24 @@
 $(document).ready(function(){
 
+	//parallax scrolling
+	if($(window).width() > 768){
+		var $window = $(window);
+
+		$('section[data-type="background"]').each(function(){
+			var $bgobj = $(this);
+			$(window).scroll(function() {
+			var yPos = -($window.scrollTop() / $bgobj.data('speed'));
+			var bgpos = '50% '+ yPos + 'px';
+			// Move the background
+			$bgobj.css({ backgroundPosition: bgpos });
+			});
+		});
+	}
+
+	if (!Modernizr.video) {
+			$('#homebg').css('display','none');
+	}
+
   //menu toggle
 	$('.menu').on('click', function(ev) {
 	    $('.menu').toggleClass('active');
